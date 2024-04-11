@@ -13,10 +13,21 @@ sumToN(-8)  // returns null
 
 
 function sumToN(n) {
-  // Your code here 
+  if (n < 0) {
+    return null;
+  }
+
+  if (n > 0) {
+    return n + sumToN(n - 1);
+  } else {
+    return n;
+  }
 }
 
-
+console.log(sumToN(5)) // returns 15
+console.log(sumToN(1))  // returns 1
+console.log(sumToN(9))  // returns 45
+console.log(sumToN(-8))  // returns null
 /**************DO NOT MODIFY ANYTHING UNDER THIS LINE*****************/
 try {
   module.exports = sumToN;
